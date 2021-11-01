@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-merienda;
+  }
+
+  .header-link {
+    @apply md:text-sm cursor-pointer hover:animate-pulse;
+  }
+
+  .card {
+    @apply bg-white bg-opacity-60 hover:bg-opacity-100 ;
+  }
+
+  .card-outlined {
+    @apply bg-white shadow-md filter drop-shadow-xl;
+  }
+
+  .btn-filter {
+    @apply shadow-img px-5 py-1 hover:shadow-inner;
+  }
+}
