@@ -1,12 +1,12 @@
 import { useRouter } from "next/dist/client/router";
-import { useCallback, useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Layout from './../../components/Layout';
 import About from './../../utils/About';
-import { useSelector } from 'react-redux';
+import { useRecoilValue } from "recoil";
+import { productsState } from "../../atoms/productsState";
 
 export default function comp() { 
-  const products = useSelector(state => state.products.products);
+  const products = useRecoilValue(productsState)
   const {query} = useRouter();
   const currentProduct = products.find(item => item.id === +query.id);
 
@@ -33,7 +33,6 @@ export default function comp() {
             <span className="font-bold">Price: </span>
             {currentProduct?.price}$
           </div>
-
         </div>
       </About>
     </Layout>

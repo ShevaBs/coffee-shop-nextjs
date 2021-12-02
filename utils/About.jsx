@@ -7,7 +7,7 @@ export default function About({img, titleText, children}) {
         img && (
           <div className="w-[272px] h-[355px] shadow-img">
             <img 
-              className="object-cover w-full h-full" 
+              className="object-contain w-full h-full" 
               src={img} alt="about-img" />
           </div>
         )

@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux"
+import { useState } from "react";
+
+import { useRecoilValue } from "recoil";
+import { bestProductsState, productsState } from "../atoms/productsState";
 import CardsItem from "./CardsItem"
 import Filter from "./Filter"
 
 export default function ProductCards({divider, filter, isBest}) {
-  const products = useSelector(state => state.products.products);
-  const bestProducts = useSelector(state => state.products.bestProducts);
+  const products = useRecoilValue(productsState);
+  const bestProducts = useRecoilValue(bestProductsState);
   const [productFilter, setProductFilter] = useState('');
   const [searchTerm, setSearchTerm] = useState("");
 

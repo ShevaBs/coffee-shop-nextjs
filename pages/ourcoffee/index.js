@@ -1,4 +1,3 @@
-import Head from 'next/dist/shared/lib/head';
 import Header from '../../components/Header';
 import Layout from './../../components/Layout';
 import AboutBeans from './../../components/AboutBeans';

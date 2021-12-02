@@ -1,4 +1,3 @@
-import Title from "../utils/Title";
 import About from './../utils/About';
 
 export default function AboutUs() {
