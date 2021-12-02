@@ -8,7 +8,7 @@ export default function Filter({setProductFilter, setSearchTerm}) {
   
   return (
     <div className="mb-16 flex gap-20 justify-center flex-wrap md:gap-10 md:px-6">
-      <form className="space-x-5">
+      <form className="md:flex md:gap-4 flex-col text-center space-x-5">
         <label htmlFor="search">Looking for</label>
         <input 
           onInput={(e) => setSearchTerm(e.target.value)}
@@ -18,7 +18,7 @@ export default function Filter({setProductFilter, setSearchTerm}) {
           placeholder="start typing here..."/>
       </form>
 
-      <section className="flex gap-9 items-center">
+      <section className="flex md:flex-col gap-9 md:gap-4 items-center">
         <h3>Or filter</h3>
         <div className="flex gap-4">
           <button 

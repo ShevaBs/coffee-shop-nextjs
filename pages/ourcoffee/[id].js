@@ -8,12 +8,8 @@ import { useSelector } from 'react-redux';
 export default function comp() { 
   const products = useSelector(state => state.products.products);
   const {query} = useRouter();
-
   const currentProduct = products.find(item => item.id === +query.id);
-  
-  console.log(currentProduct)
-  console.log(query)
-  
+
   return (
     <Layout headTitle="Our Coffee">
       <Header
@@ -24,7 +20,7 @@ export default function comp() {
         titleText="About it"
         img={currentProduct?.img}
       >
-        <div className="max-w-[430px] w-full space-y-5">
+        <div className="max-w-[430px] w-full space-y-5 px-3">
           <div>
             <span className="font-bold">Country: </span>
             {currentProduct?.country}
